@@ -8,6 +8,7 @@ import DesktopNavbar from "./components/desktop-navbar/DesktopNavbar";
 import Introduction from "./components/introduction/Introduction";
 import Challenge from "./components/challenge/Challenge";
 import stopwatchImage from "./assets/img/challenges/stopwatch.jpg";
+import Stopwatch from "./components/challenges/stopwatch/Stopwatch";
 
 function App() {
   return (
@@ -61,6 +62,10 @@ function App() {
           img={stopwatchImage}
           imgAlt="An image of the stopwatch challenge."
         />
+      </section>
+
+      <section className="mx-4 mt-6 lg:w-1/3 lg:mx-auto">
+        <Stopwatch />
       </section>
     </div>
   );
