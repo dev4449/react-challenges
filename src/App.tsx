@@ -6,6 +6,9 @@ import "@fontsource/ubuntu/700.css";
 import MobileNavbar from "./components/mobile-navbar/MobileNavbar";
 import DesktopNavbar from "./components/desktop-navbar/DesktopNavbar";
 import Introduction from "./components/introduction/Introduction";
+import Challenge from "./components/challenge/Challenge";
+import stopwatchImage from "./assets/img/challenges/stopwatch.jpg";
+
 function App() {
   return (
     <div className="text-primary">
@@ -13,6 +16,51 @@ function App() {
       <DesktopNavbar />
       <section className="flex justify-center mx-4 mt-6">
         <Introduction />
+      </section>
+
+      <section className="flex justify-center mx-4 mt-6 gap-y-8 gap-x-8 flex-wrap">
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
+        <Challenge
+          name="Challenge #1: Stop Watch / Timer"
+          description=" A stop watch or timer that tracks time in seconds. Has the ability to
+        start, stop, and reset."
+          img={stopwatchImage}
+          imgAlt="An image of the stopwatch challenge."
+        />
       </section>
     </div>
   );
