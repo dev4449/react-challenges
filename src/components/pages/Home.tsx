@@ -1,4 +1,4 @@
-import Introduction from "../introduction/Introduction";
+import Introduction from "../Introduction";
 import Challenge from "../challenge/Challenge";
 import stopwatchImage from "../challenges/Stopwatch/Stopwatch.jpg";
 import Stopwatch from "../challenges/Stopwatch/Stopwatch";
