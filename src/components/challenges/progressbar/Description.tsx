@@ -16,7 +16,7 @@ const Description = () => {
         <h3 className="text-2xl mt-4">See It In Action</h3>
         <Progressbar />
       </div>
-      <div className="lg:w-2/3 rounded-xl border-[1px] border-primary p-5">
+      <div className="w-full lg:w-2/3 rounded-xl border-[1px] border-primary p-5">
         <h2 className="text-3xl">My Solution</h2>
         <p className="mt-4">We will first define the component.</p>
         <SyntaxHighlighter language="typescript" style={dracula}>
