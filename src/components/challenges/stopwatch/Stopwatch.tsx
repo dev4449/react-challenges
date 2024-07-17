@@ -21,9 +21,17 @@ export default function Stopwatch() {
     intervalId.current = 0;
     setTime(0);
   };
+
+  const convertTimeToString = () => {
+    const hours = Math.floor(time / 3600);
+    const minutes = Math.floor((time % 3600) / 60);
+    const seconds = time % 60;
+
+    return `${hours}:${minutes}:${seconds}`;
+  };
   return (
     <div className="text-center border-[1px] border-primary rounded-xl p-4">
-      <p className="text-2xl">{time}S Passed</p>
+      <p className="text-2xl">{convertTimeToString()}</p>
       <div className="mt-4 text-white text-lg flex flex-nowrap gap-x-2">
         <button
           className="w-1/3 h-[50px] rounded-lg bg-secondary"
