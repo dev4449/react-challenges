@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 
-export default function Stopwatch() {
+const Stopwatch = () => {
   const [time, setTime] = useState(0);
   const intervalId = useRef<number>(0);
 
@@ -54,4 +54,6 @@ export default function Stopwatch() {
       </div>
     </div>
   );
-}
+};
+
+export default Stopwatch;

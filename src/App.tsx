@@ -8,6 +8,7 @@ import DesktopNavbar from "./components/desktop-navbar/DesktopNavbar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
+import ChallengePage from "./components/pages/ChallengePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <DesktopNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/challenges/:challengeId" element={<ChallengePage />} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Routes>
       </div>

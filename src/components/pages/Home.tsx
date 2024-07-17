@@ -1,8 +1,8 @@
 import Introduction from "../introduction/Introduction";
 import Challenge from "../challenge/Challenge";
-import stopwatchImage from "../challenges/stopwatch/Stopwatch.jpg";
-import Stopwatch from "../challenges/stopwatch/Stopwatch";
-import Progressbar from "../challenges/progressbar/Progressbar";
+import stopwatchImage from "../challenges/Stopwatch/Stopwatch.jpg";
+import Stopwatch from "../challenges/Stopwatch/Stopwatch";
+import Progressbar from "../challenges/Progressbar/Progressbar";
 
 const Home = () => {
   return (

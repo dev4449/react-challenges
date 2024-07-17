@@ -1,22 +1,37 @@
-# Stopwatch / Timer
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import Progressbar from "./Progressbar";
 
-## Challenge Description
+const Description = () => {
+  return (
+    <div className="flex flex-wrap lg:flex-nowrap gap-x-14 gap-y-5">
+      <div className="lg:w-1/3">
+        <h2 className="text-3xl">Progress Bar</h2>
+        <h3 className="text-2xl mt-4">Challenge Description</h3>
 
-Create a component that views a progress bar that gets filled based on the amount the user specifies.
-
-## My Solution
-
-We will first define the component.
-
-```ts
+        <p>
+          Create a component that views a progress bar that gets filled based on
+          the amount the user specifies.
+        </p>
+        <h3 className="text-2xl mt-4">See It In Action</h3>
+        <Progressbar />
+      </div>
+      <div className="lg:w-2/3 rounded-xl border-[1px] border-primary p-5">
+        <h2 className="text-3xl">My Solution</h2>
+        <p className="mt-4">We will first define the component.</p>
+        <SyntaxHighlighter language="typescript" style={dracula}>
+          {`
 const Progressbar = () => {
   return <div></div>;
 };
-```
+`.trim()}
+        </SyntaxHighlighter>
 
-Then, we will define the general markup returned by the component.
-
-```ts
+        <p>
+          Then, we will define the general markup returned by the component.
+        </p>
+        <SyntaxHighlighter language="typescript" style={dracula}>
+          {`
 const Progressbar = () => {
   return (
     <div className="border-[1px] border-primary flex justify-center flex-wrap gap-y-5 py-10 rounded-xl">
@@ -47,13 +62,18 @@ const Progressbar = () => {
     </div>
   );
 };
-```
+`.trim()}
+        </SyntaxHighlighter>
 
-As you see, the progress amount is display using an inner div. The progress amount, which is always a number between 0 inclusive and 100 inclusive, is used as the width of the mentioned inner div.
+        <p>
+          As you see, the progress amount is display using an inner div. The
+          progress amount, which is always a number between 0 inclusive and 100
+          inclusive, is used as the width of the mentioned inner div. The
+          complete solution:
+        </p>
 
-The complete solution:
-
-```ts
+        <SyntaxHighlighter language="typescript" style={dracula}>
+          {`
 const Progressbar = () => {
   const [progressAmount, setProgressAmount] = useState<number>(0);
   const handleProgressAmountChange = () => {
@@ -74,7 +94,7 @@ const Progressbar = () => {
       "#progressAmountDiv"
     ) as HTMLDivElement;
     if (progressBar) {
-      progressBar.style.width = `${progressAmount}%`;
+      progressBar.style.width = \`\${progressAmount}%\`;
     }
   }, [progressAmount]);
   return (
@@ -106,4 +126,11 @@ const Progressbar = () => {
     </div>
   );
 };
-```
+
+        `.trim()}
+        </SyntaxHighlighter>
+      </div>
+    </div>
+  );
+};
+export default Description;
