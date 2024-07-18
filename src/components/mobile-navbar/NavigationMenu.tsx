@@ -1,5 +1,6 @@
 import { Icon } from "@iconify-icon/react/dist/iconify.mjs";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 interface NavigationMenuProps {
   isOpen: boolean;
@@ -35,7 +36,7 @@ const NavigationMenu = (props: NavigationMenuProps) => {
         </div>
         <nav className="mt-8 text-start ms-4 text-2xl font-bold">
           <ul>
-            <li>Home</li>
+            <Link to="/">Home</Link>
           </ul>
         </nav>
       </div>
