@@ -1,7 +1,14 @@
 import { useEffect, useState } from "react";
 
+/*
+The progress bar component uses a numerical state variable to keep track of the amount of progress to display.
+We use two divs. The outer one is the container for the progress bar, and the inner one is the actual progress amount. 
+*/
 const Progressbar = () => {
+  // Numerical state variable to keep track of the progress amount
   const [progressAmount, setProgressAmount] = useState<number>(0);
+
+  // Function that gets called when the user enters a new progress amount
   const handleProgressAmountChange = () => {
     const progressAmountInput = document.getElementById(
       "progressAmount"
@@ -9,12 +16,14 @@ const Progressbar = () => {
 
     if (progressAmountInput) {
       const amount = Number(progressAmountInput.value);
+      // We update our state variable only if the entered amount is between 0 and 100.
       if (amount >= 0 && amount <= 100) {
         setProgressAmount(amount);
       }
     }
   };
 
+  // We use this hook to update the progress bar width whenever the progress amount changes.
   useEffect(() => {
     const progressBar = document.querySelector(
       "#progressAmountDiv"
@@ -23,6 +32,7 @@ const Progressbar = () => {
       progressBar.style.width = `${progressAmount}%`;
     }
   }, [progressAmount]);
+  
   return (
     <div className="border-[1px] border-primary flex justify-center flex-wrap gap-y-5 py-10 rounded-xl">
       <div className="mx-7 w-full h-[50px] p-[4px] border-primary border-[1px] rounded-2xl relative">

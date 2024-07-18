@@ -1,7 +1,16 @@
 import { useRef, useState } from "react";
 
+/*
+The stopwatch component uses a numerical state variable to keep track of the time elapsed in seconds.
+It basically uses the setInterval function to run an interval that runs every second.
+When the interval runs, it increments the numerical state variable by 1, meaning 1 second has passed.
+*/
 const Stopwatch = () => {
+  // Numerical state variable to keep track of the time elapsed in seconds
   const [time, setTime] = useState(0);
+
+  // We use a ref to keep track of the interval id. Because we need the interval id to clear
+  // the interval when the user clicks stop or reset.
   const intervalId = useRef<number>(0);
 
   const handleStart = () => {
